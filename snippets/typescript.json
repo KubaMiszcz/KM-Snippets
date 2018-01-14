@@ -1,0 +1,40 @@
+{
+    "Print message to console": {
+        "prefix": "km-log",
+        "body": [
+            "console.log('${1|xxx,yyy,zzz|}');",
+            "$0"
+        ],
+        "description": "Log output to console"
+    },
+    "Print message with this.variable to console": {
+        "prefix": "km-log-this-variable",
+        "body": [
+            "console.log('${1| ,xxx,yyy,zzz|}' ${3| + this.,+ |}${2:variable});",
+            "$0"
+        ],
+        "description": "Log output to console"
+    },
+    "If statement": {
+        "prefix": "km-if",
+        "body": [
+            "if (${1:var1} === ${2:var2}) {",
+            "\t${3://statementIfTrue};",
+            "}",
+            "$0"
+        ],
+        "description": "If statement"
+    },
+    "If else statement": {
+        "prefix": "km-if-else",
+        "body": [
+            "if (${1|this., |}${2:variable} ${3|===,==,!==,<,>|} ${4|true,false,unindetified,variable,this.variable|}) {",
+            "\t${5://statementIfTrue};",
+            "} else {",
+            "\t${6://statementIfFalse};",
+            "}",
+            "$0"
+        ],
+        "description": "If else statement"
+    }
+}

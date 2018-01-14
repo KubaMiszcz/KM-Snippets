@@ -1,0 +1,24 @@
+{
+    "name": "km-snippets",
+    "displayName": "KM-Snippets",
+    "description": "snippety Kuby Miszcza",
+    "version": "0.0.13",
+    "publisher": "KubaMiszcz",
+    "engines": {
+        "vscode": "^1.19.0"
+    },
+    "categories": [
+        "Snippets"
+    ],
+    "contributes": {
+        "snippets": [{
+                "language": "typescript",
+                "path": "./snippets/typescript.json"
+            },
+            {
+                "language": "html",
+                "path": "./snippets/html.json"
+            }
+        ]
+    }
+}
