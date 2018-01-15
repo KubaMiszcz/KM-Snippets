@@ -5,7 +5,7 @@
             "console.log('${1|xxx,yyy,zzz|}');",
             "$0"
         ],
-        "description": "Log output to console"
+        "description": "Log selected textmark to console"
     },
     "Print message with this.variable to console": {
         "prefix": "km-log-this-variable",
@@ -13,7 +13,7 @@
             "console.log('${1| ,xxx,yyy,zzz|}' ${3| + this.,+ |}${2:variable});",
             "$0"
         ],
-        "description": "Log output to console"
+        "description": "Log selected textmark and output to console"
     },
     "If statement": {
         "prefix": "km-if",

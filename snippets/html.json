@@ -1,6 +1,6 @@
 {
     "routerLink inside tag": {
-        "prefix": "km-ng-router",
+        "prefix": "km-ng-routerLink",
         "body": [
             "[routerLink]=\"[ '/${1:path}',${2| ,routeParam|}]\""
         ],
