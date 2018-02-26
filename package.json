@@ -2,7 +2,7 @@
     "name": "km-snippets",
     "displayName": "KM-Snippets",
     "description": "snippety Kuby Miszcza",
-    "version": "0.0.142",
+    "version": "0.0.143",
     "publisher": "KubaMiszcz",
     "engines": {
         "vscode": "^1.19.0"

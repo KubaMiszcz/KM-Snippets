@@ -1,6 +1,7 @@
 # Some Snippets for VS Code
-<!-- **text** -->
+** current version: 0.0.143**
 <!-- ![VS Code Marketplace](http://vsmarketplacebadge.apphb.com/version-short/HookyQR.beautify.svg) -->
+<!-- publish-> vsce publish -->
 
 This extension for Visual Studio Code adds snippets for Angular for TypeScript and HTML.
 

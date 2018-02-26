@@ -5,7 +5,7 @@
             "console.log('${1|xxx,yyy,zzz|}');",
             "$0"
         ],
-        "description": "Log output to console"
+        "description": "Log textmark to console"
     },
     "Print message with this.variable to console": {
         "prefix": "km-log-this-variable",
@@ -13,30 +13,42 @@
             "console.log('${1| ,xxx,yyy,zzz|}' ${3| + this.,+ |}${2:variable});",
             "$0"
         ],
-        "description": "Log output to console"
+        "description": "Log textmark and this.variable to console"
     },
     "Print message with JSON this.variable to console": {
         "prefix": "km-log-json-this-variable",
         "body": [
-            "console.log('${1| ,xxx,yyy,zzz|}' ${3| + JSON.stringify(this.,+ JSON.stringify(|}${2:variable});",
+            "console.log('${1| ,xxx,yyy,zzz|}' ${3| + JSON.stringify(this.,+ JSON.stringify(|}${2:variable}));",
             "$0"
         ],
-        "description": "Log output to console"
+        "description": "Log textmark and stringify this.variable to console"
     },
     "If statement": {
         "prefix": "km-if",
         "body": [
-            "if (${1:var1} === ${2:var2}) {",
-            "\t${3://statementIfTrue};",
+            "if (${1|this., |}${2:variable} ${3|===,==,!==,<,>,>=,<=|} ${4|true,false,unindetified,variable,this.variable|}) {",
+            "\t${5://statementIfTrue};",
             "}",
             "$0"
         ],
         "description": "If statement"
     },
+    "If else statement": {
+        "prefix": "km-if-else",
+        "body": [
+            "if (${1|this., |}${2:variable} ${3|===,==,!==,<,>,>=,<=|} ${4|true,false,undefined,variable,this.variable|}) {",
+            "\t${5://statementIfTrue};",
+            "} else {",
+            "\t${6://statementIfFalse};",
+            "}",
+            "$0"
+        ],
+        "description": "If else statement"
+    },
     "@Input() decorator": {
         "prefix": "km-input",
         "body": [
-            "@Input() ${1:name}: ${2:type};",
+            "@Input() ${1:name}: ${2|any,number,string|};",
             "$0"
         ],
         "description": "Angular @Input decorator"
@@ -44,7 +56,7 @@
     "@Output() decorator": {
         "prefix": "km-output",
         "body": [
-            "@Output() ${1:name}: ${2:type};",
+            "@Output() ${1:name}: ${2|any,number,string|};",
             "$0"
         ],
         "description": "Angular @Output decorator"
@@ -52,10 +64,11 @@
     "Event emitter property": {
         "prefix": "km-event-emitter",
         "body": [
-            "@Output() ${1:notify}: EventEmitter<${2:type}> = new EventEmitter<${2:type}>();",
+            "@Output() ${1:notify}: EventEmitter<${2|any,number,string|}> = new EventEmitter<${2|any,number,string|}>();",
             "\n",
-            "passValueFromEvent(${3:value}: ${2:type}) {",
+            "passValueFromEvent(${3:value}: ${2|any,number,string|}) {",
             "\tthis.${1:notify}.emit(${3:value});",
+            "}",
             "$0"
         ],
         "description": "Event emitter property"
@@ -63,8 +76,9 @@
     "emit Value from event Event emitter property": {
         "prefix": "km-emit-event-value",
         "body": [
-            "passValueFromEvent(${1:value}: ${2:type}) {",
+            "passValueFromEvent(${1:value}: ${2|any,number,string|}) {",
             "\tthis.${3:notify}.emit(${1:value});",
+            "}",
             "$0"
         ],
         "description": "emit Value from event Event emitter property"
