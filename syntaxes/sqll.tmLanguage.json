@@ -1,0 +1,8 @@
+{
+    "name": "sqll",
+    "patterns": [{
+        "name": "keyword.control",
+        "match": "asdfg"
+    }],
+    "scopeName": "source.sqll"
+}

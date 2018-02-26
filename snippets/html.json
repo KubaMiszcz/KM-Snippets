@@ -16,7 +16,7 @@
     "handle event in target": {
         "prefix": "km-handle-event",
         "body": [
-            "(${1:notify})=\"on${2:eventName}($event)"
+            "(${1:notify})='on${2:EventName}(\\$$eventtt)'"
         ],
         "description": "handle event in target"
     }

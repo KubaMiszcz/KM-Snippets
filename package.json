@@ -2,13 +2,21 @@
     "name": "km-snippets",
     "displayName": "KM-Snippets",
     "description": "snippety Kuby Miszcza",
-    "version": "0.0.143",
+    "version": "0.0.147",
     "publisher": "KubaMiszcz",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/KubaMiszcz/KM-Snippets.git"
+    },
     "engines": {
-        "vscode": "^1.19.0"
+        "vscode": "^1.20.0"
+    },
+    "scripts": {
+        "update-grammar": "node ../../build/npm/update-grammar.js Microsoft/vscode-mssql syntaxes/SQL.plist ./syntaxes/sql.tmLanguage.json"
     },
     "categories": [
-        "Snippets"
+        "Snippets",
+        "Languages"
     ],
     "contributes": {
         "snippets": [{
@@ -19,7 +27,23 @@
                 "language": "html",
                 "path": "./snippets/html.json"
             }
-        ]
+        ],
+        "languages": [{
+            "id": "sqll",
+            "aliases": [
+                "sqll",
+                "sqll"
+            ],
+            "extensions": [
+                ".sqll"
+            ],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "sqll",
+            "scopeName": "source.sqll",
+            "path": "./syntaxes/sqll.tmLanguage.json"
+        }]
     },
     "dependencies": {
         "vsce": "^1.35.0"

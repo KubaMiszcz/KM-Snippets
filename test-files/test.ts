@@ -18,3 +18,9 @@ passValueFromEvent(value : type) {
         .notify
         .emit(value);
 }
+
+passValueFromEvent(sdfsdfsd : number) {
+    this
+        .notify
+        .emit(sdfsdfsd);
+}

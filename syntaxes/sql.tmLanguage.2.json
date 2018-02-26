@@ -1,0 +1,39 @@
+{
+    "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+    "name": "sql",
+    "patterns": [{
+            "include": "#keywords"
+        },
+        {
+            "include": "#strings"
+        },
+        {
+            "include": "#ffff"
+        }
+    ],
+    "repository": {
+        "keywords": {
+            "patterns": [{
+                "name": "keyword.control",
+                "match": "\\b(if|while|for|return|asdf)\\b"
+            }]
+        },
+        "strings": {
+            "name": "string.quoted.double.sql",
+            "begin": "\"",
+            "end": "\"",
+            "patterns": [{
+                "name": "constant.character.escape.sql",
+                "match": "\\\\."
+            }]
+        },
+        "ffff": {
+            "name": "string.quoted.double.sql",
+            "patterns": [{
+                "name": "keyword.control",
+                "match": "asdf"
+            }]
+        }
+    },
+    "scopeName": "source.sql"
+}
